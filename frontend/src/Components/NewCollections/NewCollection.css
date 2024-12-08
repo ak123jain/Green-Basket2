@@ -1,0 +1,77 @@
+ /* NewCollection.css */
+
+ /* NewCollection.css */
+
+.collection {
+    padding: 20px;
+    max-width: 1100px; /* Sets a maximum width to limit the overall size */
+    margin: 0 auto; /* Centers the collection on the page */
+    text-align: center;
+    width: 100%; /* Ensures the container adjusts to the viewport */
+}
+
+.collection h1 {
+    font-size: 2.5rem;
+    color: #d0ded8;
+    margin-bottom: 10px;
+}
+
+.collection hr {
+    width: 20%;
+    margin: 10px auto 30px;
+    border: 0;
+    border-top: 2px solid #d9e8e2;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 items per row */
+    gap: 20px;
+    justify-content: center; /* Ensures the grid stays centered */
+}
+
+.item {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+}
+
+.item h2 {
+    font-size: 1.5rem;
+    color: #081c15;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 10px 0;
+}
+
+.item .prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item .new-price {
+    font-size: 1.2rem;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.item .old-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #163148;
+}

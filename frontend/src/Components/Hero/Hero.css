@@ -1,0 +1,51 @@
+/* Hero.css */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.hero-left {
+    flex: 1;
+    padding: 1rem;
+}
+
+.hero-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2d572c; /* Green color to align with the organic theme */
+}
+
+.hero-icon {
+    margin-bottom: 1rem;
+}
+
+.hero-icon p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.hero-icon img {
+    width: 150px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.hero-left p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.hero-right {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+}
+
+.second-icon img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}

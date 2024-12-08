@@ -1,0 +1,100 @@
+/* Container */
+.loginsignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2b1b1b;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+  }
+  
+  .loginsignup-container {
+    background-color: rgb(255, 248, 248);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .loginsignup-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .loginsignup-fields input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .loginsignup-fields input:focus {
+    border-color: #152e48;
+    outline: none;
+    color: #0056b3;
+  }
+  
+  
+
+  .loginsignup-fields input{
+    background-color: #303b47;
+  } 
+
+  /* Button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #31383f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #647a92;
+  }
+  
+  /* Text */
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  p span {
+    color: #344454;
+    cursor: pointer;
+  }
+  
+  p span:hover {
+    text-decoration: underline;
+  }
+  
+  /* Checkbox */
+  .loginsignup-agree {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .loginsignup-agree input {
+    margin-right: 10px;
+  }
+  
+  .loginsignup-agree p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+   

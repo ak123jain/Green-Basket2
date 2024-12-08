@@ -1,0 +1,45 @@
+.shop-category {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px; /* Adjust this value based on the banner size */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 90%;
+  height:  20%;
+  display: block;
+  margin-bottom: 20px;
+  max-width: 70%;
+  margin-left: 150px;
+}
+
+.para {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  row-gap: 20px;
+  column-gap: 82px;
+  max-width: 96%;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+ 

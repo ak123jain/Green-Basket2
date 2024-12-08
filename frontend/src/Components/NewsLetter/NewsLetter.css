@@ -1,0 +1,50 @@
+.newsletter {
+    background: linear-gradient(135deg, #265528 0%, #4a884d 50%, #81c784 100%);
+    padding: 50px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(44, 42, 42, 0.2);
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+ 
+.newsletter h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    z-index: 1;
+    position: relative;
+}
+
+.newsletter input[type="email"] {
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    width: 250px;
+    max-width: 100%;
+    margin-right: 10px;
+    outline: none;
+    z-index: 1;
+    position: relative;
+}
+
+.newsletter button {
+    padding: 15px 30px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1
