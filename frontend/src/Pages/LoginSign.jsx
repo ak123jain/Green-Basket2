@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CSS/loginsignup.css'
 
 const LoginSign = () => {
+
+    const [name,setName] = useState("")
+
+
+    const handleSubmit = () =>{
+        // api call : axios.post() h
+        // http:localhost:8000 => SERVER_URL
+
+    }
+
     return (
          <div className="loginsignup">
             <div className="loginsignup-container">

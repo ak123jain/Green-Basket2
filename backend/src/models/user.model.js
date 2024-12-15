@@ -19,6 +19,17 @@ const userSchema = new Schema({
         type : String,
         required : true 
     },
+    avatar: {
+      type: String, // cloudinary url
+      required: true,
+    },
+    coverImage: {
+      type: String, // cloudinary url
+    },
+    refreshToken: {
+      type: String
+  }
+
      
 },{timestamps: true})
 
@@ -37,7 +48,8 @@ userSchema.methods.generateAccessToken = function (){
         
      {
         _id : this._id,
-        
+        username : this.username,
+        email : this.email
       },
       process.env.ACCESS_TOKEN_SECRET,
       {
@@ -51,8 +63,7 @@ userSchema.methods.generateRefreshToken = function (){
         
      {
         _id : this._id,
-        username : this.username,
-        email : this.email
+        
       },
       process.env.REFRESH_TOKEN_SECRET,
       {

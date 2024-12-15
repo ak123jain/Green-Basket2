@@ -2,7 +2,7 @@ import { v2 as cloudinary } from 'cloudinary';
 import fs from 'fs'
 
 
-(async function() {
+ 
 
     // Configuration
     cloudinary.config({ 
@@ -11,7 +11,7 @@ import fs from 'fs'
         api_secret:  process.env.CLOUD_API_SECRET // Click 'View API Keys' above to copy your API secret
     });
 
-})
+
 
 const uploadfileoncloudniary = async (localfilepath) =>{
     try {
