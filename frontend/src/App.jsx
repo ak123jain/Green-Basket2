@@ -13,7 +13,7 @@ import Footer from './Components/Footer/Footer';
 import plant_banner from './Components/Assets/plant_banner.jpeg';
 import seeds_banner from './Components/Assets/seeds_banner.jpg';
 import  vagetable_banner from './Components/Assets/vegetable_banner.webp';
-
+import Login from './Pages/Login';
 
 function App() {
    
@@ -32,6 +32,7 @@ function App() {
         <Route path="/product/:productId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<LoginSign />} />
+        <Route path="/loggeduser" element={<Login />} />
       </Routes>
     </BrowserRouter>
     <Footer />

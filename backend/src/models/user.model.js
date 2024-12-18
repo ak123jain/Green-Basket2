@@ -17,7 +17,7 @@ const userSchema = new Schema({
     },
     adress: {
         type : String,
-        required : true 
+        required : false 
     },
     avatar: {
       type: String, // cloudinary url
@@ -33,14 +33,23 @@ const userSchema = new Schema({
      
 },{timestamps: true})
 
-userSchema.pre("save"  , async function(next){
-    if(!this.isModified("password")) next()
-   this.password = await bcrypt.hash(this.password , 10)
-    next()
+userSchema.pre("save", async function (next) {
+  if(!this.isModified("password")) return next();
+
+  this.password = await bcrypt.hash(this.password, 10)
+  
+  next()
 })
 
 userSchema.methods.isPasswordCorrect = async function (password){
-   return await bcrypt.compare(password , this.password)
+
+  console.log("hashed password " , this.password);
+console.log("password in the database" , password);
+
+
+   const ans = await bcrypt.compare(password , this.password)
+   console.log("password hashed" , ans);
+   return ans
 }
 
 userSchema.methods.generateAccessToken = function (){

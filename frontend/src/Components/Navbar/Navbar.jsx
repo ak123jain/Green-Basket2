@@ -24,7 +24,7 @@ const Navbar  = () =>  {
                 </ul>
             </div>
             <div className="nav-login-cart">
-                 <Link to='/login' ><button>Login</button></Link>
+                 <Link to='/login' ><button>Sign</button></Link>
 
                   <Link to='/cart' ><img src={cart_icon} alt="" /></Link>
                  <div className="nav-cart-count">0</div>
@@ -34,5 +34,3 @@ const Navbar  = () =>  {
 }
 
 export default Navbar
-
-

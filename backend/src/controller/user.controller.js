@@ -47,9 +47,16 @@ const registeruser = asynchandler(async(req , res)=>{
     // check for user creation
     // return res
 
-    const {username, email , password ,  adress} = req.body
+    const {username, email , password , adress } = req.body
 
-    console.log("all fields are here" , username);
+    console.log("all usrname are here" , username); 
+    console.log("all  password are here" ,  password); 
+    console.log("all  adress are here" ,  adress); 
+    console.log("all  email are here" ,  email); 
+     
+    
+     
+
     
 
     if([username , email , password , adress].some((field)=>{
@@ -117,6 +124,10 @@ const loggedinUser = asynchandler(async(req , res)=>{
 
     const {username , password , email} = req.body
 
+    console.log("ritu " ,req.body.password  );
+    console.log("ritu " ,req.body.email  );
+    console.log("ritu " ,req.body.username  );
+
     if (!username || !password) {
         throw new ApiError(404 , "username or password is invalid")
     }
@@ -128,6 +139,9 @@ const loggedinUser = asynchandler(async(req , res)=>{
     if (!user) {
         throw new ApiError(404, "User does not exist")
     }
+
+     
+    
 
     const isPasswordValid = await user.isPasswordCorrect(password)
 
@@ -239,13 +253,17 @@ const RefreshAccessToken = asynchandler(async(req , res)=>{
 
 
 const changecurrentpassword = asynchandler(async(req , res)=>{
-    const {oldpassword , newpassword} = req.body
+    const {password , newpassword} = req.body
 
-    const user = await User.findById(req.user?._id)
+    const user = await User.findOne(req.user?._id).select("+password")
 
-    const isPasswordcorrect = await user.isPasswordcorrect(oldpassword)
+    console.log("Request body:", req.body);
 
-    if (!isPasswordCorrect) {
+    
+
+    const isPasswordcorrect = await user.isPasswordCorrect(password)
+
+    if (!isPasswordcorrect) {
         throw new ApiError(400, "Invalid old password")
     }
 
@@ -271,22 +289,27 @@ const getCurrentUser = asynchandler(async(req, res) => {
 })
 
 const updateaccountdetail = asynchandler(async(req , res)=>{
+    
     const {username , email} = req.body
 
     if (!username || !email) {
         throw new ApiError(400, "All fields are required")
     }
 
+    console.log("req username " , req.body.username);
+    console.log("req username " , req.body.email);
+    
+
     const user = await User.findByIdAndUpdate(
-        req.user._id,
+        req.user?._id,
         {
             $set :{
-                username,
+                username : username,
                 email : email
             }
         },
         {new : true}
-    ).select(-password)
+    ).select("-password")
 
     return res
     .status(200)
@@ -325,43 +348,14 @@ const updateavatar = asynchandler(async(req , res)=>{
 
 })
 
-const updateUserCoverImage = asynchandler(async(req, res) => {
-    const coverImageLocalPath = req.file?.path
-
-    if (!coverImageLocalPath) {
-        throw new ApiError(400, "Cover image file is missing")
-    }
-
-    //TODO: delete old image - assignment
-
-
-    const coverImage = await uploadfileoncloudniary(coverImageLocalPath)
-
-    if (!coverImage.url) {
-        throw new ApiError(400, "Error while uploading on avatar")
-    }
-
-    const user = await User.findByIdAndUpdate(
-        req.user?._id,
-        {
-            $set:{
-                coverImage: coverImage.url
-            }
-        },
-        {new: true}
-    ).select("-password")
-
-    return res
-    .status(200)
-    .json(
-        new ApiResponse(200, user, "Cover image updated successfully")
-    )
-})
-
+ 
 
 export {
     registeruser,
     loggedinUser,
     logoutuser,
-    RefreshAccessToken
+    RefreshAccessToken,
+    changecurrentpassword,
+    updateaccountdetail,
+    getCurrentUser
 }
