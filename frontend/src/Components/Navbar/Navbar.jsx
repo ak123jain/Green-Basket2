@@ -3,6 +3,7 @@ import './Navbar.css'
 import {Link} from 'react-router-dom';
  
 import logo from '../Assets/logo.png'
+import  Akash from '../Assets/Akash.png'
 import cart_icon from '../Assets/cart_icon.png'
 
 const Navbar  = () =>  {
@@ -29,8 +30,13 @@ const Navbar  = () =>  {
                   <Link to='/cart' ><img src={cart_icon} alt="" /></Link>
                  <div className="nav-cart-count">0</div>
             </div>
+            <div className="profile-logo">
+                 <Link to='/profile' ><img src={Akash} alt="" /></Link>
+            </div>
         </div>
     )
 }
 
 export default Navbar
+
+ 

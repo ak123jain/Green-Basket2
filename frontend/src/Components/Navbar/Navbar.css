@@ -1,4 +1,4 @@
-  /* Navbar Container */
+ /* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -182,3 +182,12 @@
   }
 }
 
+
+/* Profile Image Circle */
+.profile-logo img {
+  width: 50px; /* Set width of the image */
+  height: 50px; /* Set height of the image */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensures the image doesn't stretch or get distorted */
+  border: 2px solid white; /* Optional: Adds a border around the image */
+}

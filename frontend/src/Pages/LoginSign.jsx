@@ -41,9 +41,7 @@ const LoginSign = () => {
 
         try {
             const response = await axios.post('http://localhost:3001/user/register', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
+                
             });
             console.log('Response:', response.data);
             alert('Registration successful!');

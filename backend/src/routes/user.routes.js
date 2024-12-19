@@ -16,11 +16,10 @@ router.route("/register").post(
     )
 
 router.route('/loggedin').post(loggedinUser)
-router.route('/logout').post(verifyjwt ,  logoutuser)
+router.route('/logout').post( verifyjwt, logoutuser)
 router.route('/refsreshaccesstoken').post(RefreshAccessToken)
 router.route('/changepassword').post(  changecurrentpassword)
 router.route('/updatedetail').patch(verifyjwt , updateaccountdetail)
-router.route('/profile').get( verifyjwt ,  getCurrentUser)
-
+router.route('/profile').get(  verifyjwt, getCurrentUser)
 
 export default router

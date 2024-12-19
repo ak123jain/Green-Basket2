@@ -8,10 +8,12 @@ export const verifyjwt = asynchandler(async(req , _, next)=>{
 
    try {
 
-        console.log("Received cookies: ", req.cookies);
+        console.log("Received cookies: ", req.cookies );
+         
+        
         console.log("Authorization header: ", req.header("Authorization"));
 
-     const token = req.cookies?.accesstoken || req.header("Authorization")?.replace("Bearer " , "")
+     const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer " , "")  
 
      console.log("akash token is here " , token);
      
@@ -23,7 +25,6 @@ export const verifyjwt = asynchandler(async(req , _, next)=>{
      const decodeToken = jwt.verify(token , process.env.ACCESS_TOKEN_SECRET)
 
      console.log("aksh decoded token" , decodeToken);
-     
  
      const user = await User.findById(decodeToken?._id).select("-password -refreshToken")
  
