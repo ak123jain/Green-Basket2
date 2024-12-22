@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './CSS/profile.css';
+import { Link } from 'react-router-dom';
+ 
 
 const Profile = () => {
     const [userdata, setuserdata] = useState(null);
@@ -36,12 +38,23 @@ const Profile = () => {
         <div className="profile">
             {
                 userdata ? (
-                    <div className="profile-details">
+                    <div className="container">
+                     <div className="profile-details">
+                        <h1>User Profile</h1>
                         <img src={userdata.avatar} alt="User Avatar" className="profile-avatar" />
                         <h2>{userdata.username}</h2>
                         <p>Email: {userdata.email}</p>
                         <p>Joined: {new Date(userdata.createdAt).toLocaleDateString()}</p>
-                    </div>
+                         
+                </div>
+                 
+                <div className="image">
+                    <img src="https://img.freepik.com/free-photo/arrangement-with-red-basket-with-plants_23-2148447150.jpg?semt=ais_hybrid" alt="" />
+                    <Link to='/logout' > <button className='btn' >Logout</button> </Link>
+                </div>
+
+                </div>
+                     
                 ) : (
                     <p>No user data found.</p> // If no user data is found
                 )
@@ -52,4 +65,4 @@ const Profile = () => {
 
 export default Profile;
 
-
+ 

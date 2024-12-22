@@ -6,21 +6,21 @@ const ProductSchema = new Schema({
         type : String,
         required : true
     },
-    description :{
+    category :{
         type : String,
         required : true
     },
-    price :{
-        type : Number,
-        required:true
-    },
-    category:{
+    
+    image:{
         type : String,
         required : true
     },
-    stock :{
+    new_price :{
         type : Number,
         required : true
+    },
+    old_price :{
+        type : Number,
     }
 },{timestamps: true})
 

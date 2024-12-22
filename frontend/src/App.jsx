@@ -15,6 +15,7 @@ import seeds_banner from './Components/Assets/seeds_banner.jpg';
 import  vagetable_banner from './Components/Assets/vegetable_banner.webp';
 import Login from './Pages/Login';
 import Profile from './Pages/profile';
+import Logout from './Pages/Logout';
 
 function App() {
    
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<LoginSign />} />
         <Route path="/loggeduser" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
     </BrowserRouter>
     <Footer />

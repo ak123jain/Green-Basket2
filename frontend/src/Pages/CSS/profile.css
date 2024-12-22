@@ -1,35 +1,136 @@
-/* profile.css */
-.profile {
+ /* Main container for profile */
+.container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
+    gap: 20px;
     padding: 20px;
-    background-color: #f5f5f5;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg,  rgb(71, 75, 62)); /* Soft green gradient background */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    border-color: #ffffff;
 }
 
+/* Image section */
+.image img {
+    width: 250px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Smooth animation on hover */
+}
+
+.image btn{
+    color: #2e7d32;
+}
+
+/* Image hover effect */
+.image img:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+}
+
+/* Profile details section */
 .profile-details {
-    text-align: center;
-    background-color: white;
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    margin-left: 5%;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background: #ffebeb; /* White background for profile details */
+    border-left: 5px solid #2e7d32; /* Green left border for emphasis */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease-in-out;
 }
 
+/* Profile details typography */
+.profile-details h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2e7d32; /* Dark green for headings */
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 18px;
+    color: #4caf50; /* Light green for text details */
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Add some iconography to enhance appearance */
+.profile-details p:before {
+    content: "🌿 "; /* Add a plant icon before each detail */
+    color: #81c784; /* Soft green for the icon */
+}
+
+/* Avatar styling */
 .profile-avatar {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #388e3c; /* Bold green border for avatar */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-h2 {
-    font-size: 24px;
-    margin: 10px 0;
+/* Avatar hover effect */
+.profile-avatar:hover {
+    transform: rotate(5deg) scale(1.1); /* Add a playful rotation and zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-p {
+/* Add a title style */
+.profile-details h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2e7d32; /* Rich green for the main title */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    margin-bottom: 15px;
+}
+
+/* Animation for smooth load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the profile sections */
+.image img,
+.profile-details {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Button styles (if needed) */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green button */
+    color: #ffffff; /* White text */
     font-size: 16px;
-    margin: 5px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom */
 }

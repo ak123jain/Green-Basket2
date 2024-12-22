@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+ 
 
 const Footer = () => {
     return (
@@ -35,7 +36,9 @@ const Footer = () => {
              <div className="icon">
                 <img src="https://greenbasket.co.in/wp-content/uploads/2019/06/play-store.png" alt="" />
                 <img src="https://greenbasket.co.in/wp-content/uploads/2019/06/app-store.png" alt="" />
+                 
              </div>
+              
         </div>
     )
 }

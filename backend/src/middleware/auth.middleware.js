@@ -8,10 +8,9 @@ export const verifyjwt = asynchandler(async(req , _, next)=>{
 
    try {
 
-        console.log("Received cookies: ", req.cookies );
+    console.log("Received cookies: ", req.cookies );
          
-        
-        console.log("Authorization header: ", req.header("Authorization"));
+     console.log("Authorization header: ", req.header("Authorization"));
 
      const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer " , "")  
 

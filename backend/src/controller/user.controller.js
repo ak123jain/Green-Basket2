@@ -179,6 +179,9 @@ const logoutuser = asynchandler(async (req, res) => {
   console.log("Logout Request Headers: ", req.headers);
   console.log("Logout Request Cookies: ", req.cookies);
 
+  console.log(" before removing the refresh token" , req.user);
+
+
   await User.findByIdAndUpdate(
     req.user._id,
     {
@@ -189,16 +192,24 @@ const logoutuser = asynchandler(async (req, res) => {
     { new: true }
   );
 
+  console.log("after removing the refresh token" , req.user);
+  
+
   const options = {
     httpOnly: true,
-    secure: true,
+    secure:  false,
+    sameSite: 'lax',
   };
 
   return res
-    .status(200)
-    .clearCookie("accessToken", options)
-    .clearCookie("refreshToken", options)
-    .json(new ApiResponse(200, {}, "user logged out"));
+  .status(200)
+  .clearCookie("accessToken", options)
+  .clearCookie("refreshToken", options)
+  .json(new ApiResponse(200, {}, "User logged Out"))
+
+   
+
+
 });
 
 const RefreshAccessToken = asynchandler(async (req, res) => {
