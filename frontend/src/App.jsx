@@ -16,6 +16,7 @@ import  vagetable_banner from './Components/Assets/vegetable_banner.webp';
 import Login from './Pages/Login';
 import Profile from './Pages/profile';
 import Logout from './Pages/Logout';
+import Addproduct from './Pages/Addproduct';
 
 function App() {
    
@@ -37,6 +38,7 @@ function App() {
         <Route path="/loggeduser" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
+         <Route path="/addproduct" element={<Addproduct />} />  
       </Routes>
     </BrowserRouter>
     <Footer />
@@ -45,5 +47,6 @@ function App() {
     
   )
 }
+ 
 
 export default App

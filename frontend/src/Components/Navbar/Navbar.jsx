@@ -32,6 +32,7 @@ const Navbar  = () =>  {
             </div>
             <div className="profile-logo">
                  <Link to='/profile' ><img src={Akash} alt="" /></Link>
+                 <Link to='/addproduct' > <button>add product </button></Link>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Offers.css'
+ 
 
 const Offers = () => {
     return (
@@ -11,9 +12,12 @@ const Offers = () => {
                 <button>Check Now</button>
             </div>
             <div className="offers-right">
-                <img src="https://files.oaiusercontent.com/file-dOhnCuZIFg02WkMYcyvQgzjF?se=2024-08-24T13%3A11%3A20Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D5879bd02-45ed-4151-b4d1-b93692698961.webp&sig=cTWQGUQ2dWLb/cfRqhf0LaXkLEQwnjwZGAkus3qkWIs%3D" alt="" />
+                <img src="https://img.freepik.com/free-photo/shopping-cart-supermarket-generative-ai_169016-29562.jpg?ga=GA1.1.1627832552.1734701685&semt=ais_hybrid" alt="" />
+                 
             </div>
+             
         </div>
+         
     )
 }
 

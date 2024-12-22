@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
  
+ 
 
 const Footer = () => {
     return (
@@ -18,9 +19,11 @@ const Footer = () => {
              </ul>
 
              <div className="footer-left">
+                <h1>Get in Touch</h1>
                 <h1>Download Our Mobile </h1>
                 <h2>App</h2>
                 <p>Discover the convenience of Greenbasket on the go!  </p>
+                 
              </div>
 
              <div className="footer-links">
@@ -36,7 +39,7 @@ const Footer = () => {
              <div className="icon">
                 <img src="https://greenbasket.co.in/wp-content/uploads/2019/06/play-store.png" alt="" />
                 <img src="https://greenbasket.co.in/wp-content/uploads/2019/06/app-store.png" alt="" />
-                 
+                  
              </div>
               
         </div>
