@@ -26,7 +26,7 @@ import axios from 'axios'
         formdata.append('name', name);
         formdata.append('old_price', old_price);
         formdata.append('new_price', new_price);
-        
+
         if (image) {
             formdata.append('image', image);
         }
@@ -35,7 +35,7 @@ import axios from 'axios'
             try {
                 const response = await axios.post('http://localhost:3001/product/addproduct' , formdata, {
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'multipart/form-data',
                     },
                     withCredentials: true,
                 })
