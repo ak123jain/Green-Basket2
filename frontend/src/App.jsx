@@ -17,6 +17,7 @@ import Login from './Pages/Login';
 import Profile from './Pages/profile';
 import Logout from './Pages/Logout';
 import Addproduct from './Pages/Addproduct';
+import Getproduct from './Pages/Getproduct';
 
 function App() {
    
@@ -38,7 +39,9 @@ function App() {
         <Route path="/loggeduser" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
-         <Route path="/addproduct" element={<Addproduct />} />  
+        <Route path="/addproduct" element={<Addproduct />} />  
+        <Route path="/getproduct" element={< Getproduct />} />  
+
       </Routes>
     </BrowserRouter>
     <Footer />

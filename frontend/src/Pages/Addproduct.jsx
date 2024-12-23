@@ -2,6 +2,8 @@ import React from 'react'
 import './CSS/Addproduct.css'
 import { useState } from 'react'
 import axios from 'axios'
+import addproduct from '../Components/Assets/addproduct.avif'
+import {useNavigate} from 'react-router-dom'
 
  const Addproduct = () => {
 
@@ -10,6 +12,8 @@ import axios from 'axios'
     const [old_price , setold_price] = useState('')
     const [new_price , setnew_price] = useState('')
     const [image , setimage] = useState(null)
+
+    const Navigator = useNavigate()
 
     const handleimage = (e) =>{
         const file = e.target.files[0];
@@ -39,7 +43,11 @@ import axios from 'axios'
                     },
                     withCredentials: true,
                 })
-                console.log('product added succesfully:', response.data)
+                console.log('product added succesfully:', response.data.data)
+                console.log('product added succesfully:', response.data.messege)
+
+                 Navigator('/getproduct')
+
             } catch (error) {
                 console.error('Error fetching product data:', error)
             }
@@ -51,10 +59,14 @@ import axios from 'axios'
 
     return (
          <div className="addproduct">
+             
             <div className="addproductcontainer">
-                <h1>Add product</h1>
+                
                 
                 <form onSubmit={onhandleSubmit} >
+
+                <img  src={addproduct} alt="" />
+
                     <input
                     type="text" 
                     value={name}
@@ -89,7 +101,7 @@ import axios from 'axios'
                     onChange={handleimage}
                     />
 
-                    <button>Submit</button>
+                   <button>Submit</button>
 
                     </form> 
 
@@ -97,5 +109,6 @@ import axios from 'axios'
          </div>
     )
 }
+
 
 export default Addproduct

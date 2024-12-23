@@ -34,7 +34,7 @@ const addproduct = asynchandler(async (req, res) => {
         throw new ApiError(201, " allll fields are required for submission");
     }
 
-
+    
     const newproduct = await Product.create({
         name,
         category,
@@ -45,11 +45,21 @@ const addproduct = asynchandler(async (req, res) => {
 
     return res.status(200).json(
         new ApiResponse({
-            success: true, message: 'Product added successfully', product: newproduct
+            success: true, message: 'Product added successfully',  data: newproduct
         } )
     )
 
 } )
+
+
+const getproduct = asynchandler(async(req , res)=>{
+    const products = await Product.find({})
+    return res.status(200).json(
+        new ApiResponse({
+            success: true, message: 'Product fetched successfully',   data: products
+        })
+    )
+})
     
 
-export { addproduct };
+export { addproduct  , getproduct } // Export the addproduct function ;

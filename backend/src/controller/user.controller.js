@@ -175,6 +175,8 @@ const loggedinUser = asynchandler(async (req, res) => {
     );
 });
 
+
+
 const logoutuser = asynchandler(async (req, res) => {
   console.log("Logout Request Headers: ", req.headers);
   console.log("Logout Request Cookies: ", req.cookies);
