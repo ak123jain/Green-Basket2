@@ -18,7 +18,7 @@ import Profile from './Pages/profile';
 import Logout from './Pages/Logout';
 import Addproduct from './Pages/Addproduct';
 import Getproduct from './Pages/Getproduct';
-import Payment from './Pages/payment';
+// import Payment from './Pages/payment';
  
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/addproduct" element={<Addproduct />} />  
         <Route path="/getproduct" element={< Getproduct />} />  
-        <Route path="/payment" element={<Payment />} />  
+        {/* <Route path="/payment" element={<Payment />} />   */}
 
       </Routes>
     </BrowserRouter>
