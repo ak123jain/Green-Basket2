@@ -7,15 +7,16 @@ import { Product } from "../models/Product.model.js"; // Import the Product mode
 
 const addproduct = asynchandler(async (req, res) => {
     
-    const {name , category , new_price , old_price} = req.body
+    const {name , category , new_price , old_price , ordername} = req.body
 
     console.log("all name are here", name);
+     
     console.log("all category are here", category);
     console.log("all new_price are here", new_price);
     console.log("all old_price are here", old_price);
     
     
-    if (!name || !category || !new_price || !old_price ) {
+    if (!name || !category || !new_price || !old_price   ) {
         throw new ApiError(201 , "filed are requhired for submission")
     }
 

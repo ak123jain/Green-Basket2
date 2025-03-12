@@ -44,8 +44,9 @@
 
 // export default CartItem
 
-import React, { useContext } from "react";
+import  { useContext , useState , useEffect} from "react";
 import './CartItem.css'
+import { Link } from "react-router-dom";
  
  
 
@@ -55,6 +56,19 @@ import remove_icon from '../Assets/cart_cross_icon.png';
 const CartItem = () => {
     // Destructure the correct variables from context
     const { cartItems, removefromCart, all_product } = useContext(ShopContext);
+    const [totalamount , settotalamount] = useState(0)  
+
+    
+    useEffect(()=>{
+        let total = 0
+        all_product.forEach((e)=>{
+             if (cartItems[e.id] > 0) {
+                total += e.new_price * cartItems[e.id]
+             }
+        })
+        settotalamount(total)
+    }, [cartItems, all_product])
+
 
     return (
         <div className="cartitems">
@@ -94,6 +108,13 @@ const CartItem = () => {
                 }
                 return null; // Return null for items not in the cart
             })}
+            <div className="totalamount">
+                <h2>total amount : ${totalamount}</h2>
+                 
+
+            </div>
+             <Link  to="/payment" state={{ totalamount }} ><button>Place Order</button></Link>
+              
         </div>
     );
 };

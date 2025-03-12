@@ -115,6 +115,10 @@ hr {
     font-size: 18px;
 }
 
+.totalamount {
+    color: #388e3c;
+}
+
 .cartitems p.price,
 .cartitems p.total {
     color: #388e3c;

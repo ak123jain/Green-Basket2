@@ -8,7 +8,7 @@ import ShopCategory from './Pages/ShopCategory'
 import Product from './Pages/Product'
 import Cart from './Pages/Cart'
 import LoginSign from './Pages/LoginSign'
-import Shop from './Pages/shop';
+import Shop from './Pages/Shop';
 import Footer from './Components/Footer/Footer';
 import plant_banner from './Components/Assets/plant_banner.jpeg';
 import seeds_banner from './Components/Assets/seeds_banner.jpg';
@@ -18,6 +18,8 @@ import Profile from './Pages/profile';
 import Logout from './Pages/Logout';
 import Addproduct from './Pages/Addproduct';
 import Getproduct from './Pages/Getproduct';
+import Payment from './Pages/payment';
+ 
 
 function App() {
    
@@ -41,6 +43,7 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/addproduct" element={<Addproduct />} />  
         <Route path="/getproduct" element={< Getproduct />} />  
+        <Route path="/payment" element={<Payment />} />  
 
       </Routes>
     </BrowserRouter>

@@ -19,9 +19,11 @@ app.use(cookieParser())
 
 import userRoutes from './routes/user.routes.js'
 import productRoutes from './routes/product.routes.js'
+import paymentRoutes from './routes/payment.routes.js'
 
 app.use('/user', userRoutes)
 app.use('/product', productRoutes)
+app.use('/payments', paymentRoutes)
 
 // http://localhost:8000/user/ user routes ka andar jo method ha vo
 export {  app }

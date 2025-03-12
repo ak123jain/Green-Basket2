@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React from 'react'
+ 
 import { useEffect , useState} from 'react';
 import './CSS/getproduct.css'
 
@@ -16,6 +16,7 @@ const  Getproduct = () => {
                 
                 
                 setproduct(response.data.statuscode.data)
+                
             } catch (error) {
                 console.error('Error fetching product data:', error)
             }
