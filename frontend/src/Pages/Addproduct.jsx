@@ -2,7 +2,7 @@
 import './CSS/Addproduct.css'
 import { useState } from 'react'
 import axios from 'axios'
-import addproduct from '../Components/Assets/addproduct.avif'
+ 
 import {useNavigate} from 'react-router-dom'
 
  const Addproduct = () => {
@@ -65,7 +65,7 @@ import {useNavigate} from 'react-router-dom'
                 
                 <form onSubmit={onhandleSubmit} >
 
-                <img  src={addproduct} alt="" />
+                <img  src='/Assets/logo.png' alt="" />
 
                     <input
                     type="text" 
