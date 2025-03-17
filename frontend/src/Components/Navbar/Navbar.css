@@ -1,10 +1,9 @@
- /* Navbar Container */
-.navbar {
+ .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  background-color: #2f6a3e; /* Dark Green */
+  background-color: #2f6a3e;
   color: white;
   position: sticky;
   top: 0;
@@ -12,7 +11,6 @@
   transition: background-color 0.3s ease;
 }
 
-/* Logo Section */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -31,18 +29,16 @@
   font-size: 1.8rem;
   font-weight: 600;
   color: white;
-  margin-bottom: 0; /* To prevent cutting off the underline */
+  margin-bottom: 0;
 }
 
-/* Logo Hover Effect */
 .nav-logo:hover img {
   transform: rotate(10deg);
 }
 
-/* Navigation Menu */
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style-type: none;
 }
 
@@ -60,32 +56,30 @@
 }
 
 .nav-menu li a:hover {
-  color: #a1d29e; /* Light Green */
+  color: #a1d29e;
 }
 
-/* Active Menu Item Underline */
 .nav-menu li hr {
   position: absolute;
-  bottom: -5px; /* Adjust the position of the underline */
+  bottom: -5px;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #a1d29e; /* Light Green */
+  background-color: #a1d29e;
   border: none;
   transition: width 0.3s ease;
 }
 
 .nav-menu li:hover hr,
 .nav-menu li.active hr {
-  width: 100%; /* Expands on hover or when active */
+  width: 100%;
 }
 
-/* Login & Cart Section */
 .nav-login-cart {
   display: flex;
   align-items: center;
   gap: 1rem;
-  position: relative; /* Position for the cart icon and count */
+  position: relative;
 }
 
 .nav-login-cart button {
@@ -101,12 +95,11 @@
 }
 
 .nav-login-cart button:hover {
-  background-color: #a1d29e; /* Light Green */
+  background-color: #a1d29e;
   border-color: #a1d29e;
   color: white;
 }
 
-/* Cart Icon and Cart Count */
 .nav-login-cart img {
   width: 30px;
   height: 30px;
@@ -130,11 +123,10 @@
   font-size: 0.9rem;
   position: absolute;
   top: -5px;
-  right: -5px; /* Close the cart count to the icon */
-  padding: 0; /* Ensures the count fits snugly */
+  right: -5px;
+  padding: 0;
 }
 
-/* Hamburger Menu (Responsive) */
 .navbar .hamburger {
   display: none;
 }
@@ -182,12 +174,14 @@
   }
 }
 
-
-/* Profile Image Circle */
 .profile-logo img {
-  width: 50px; /* Set width of the image */
-  height: 50px; /* Set height of the image */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Ensures the image doesn't stretch or get distorted */
-  border: 2px solid white; /* Optional: Adds a border around the image */
-}
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+} 
+
+
+
+ 
