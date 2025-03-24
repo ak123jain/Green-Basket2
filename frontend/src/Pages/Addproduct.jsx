@@ -37,7 +37,7 @@ import {useNavigate} from 'react-router-dom'
 
          
             try {
-                const response = await axios.post('http://localhost:3001/product/addproduct' , formdata, {
+                const response = await axios.post(`${import.meta.env.VITE_API_URL}/product/addproduct` , formdata, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },

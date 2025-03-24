@@ -10,7 +10,7 @@ const  Getproduct = () => {
     useEffect(()=>{
         const fetchdata = async()=>{
             try {
-                const response = await axios.get('http://localhost:3001/product/getproduct')
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/product/getproduct`)
                 console.log("akshi jain" , response.data);
                 console.log("aksdfgh" , response.data.statuscode.data);
                 

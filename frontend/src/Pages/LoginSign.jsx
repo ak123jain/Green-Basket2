@@ -40,7 +40,7 @@ const LoginSign = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3001/user/register', formData, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/user/register`, formData, {
                 
             });
             console.log('Response:', response.data);
