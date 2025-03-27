@@ -11,7 +11,11 @@ const Profile = () => {
     useEffect(() => {
         const fetchedUserDetail = async () => {
             try {
+                
+                
                 const token = localStorage.getItem("accessToken"); 
+                console.log("akash token is here in frontend in profile section" , token);
+                
                 const response = await axios.get(`${import.meta.env.VITE_API_URL}/user/profile` , {
                     headers: {
                         'Content-Type': 'application/json',
