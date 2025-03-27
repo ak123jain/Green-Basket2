@@ -30,6 +30,12 @@ const Login = () => {
                  
             });
             console.log('response:', response.data);
+
+            console.log("Login Successful:", response.data);
+            const { accessToken } = response.data.data;
+      
+              // Store accessToken in localStorage
+              localStorage.setItem("accessToken", accessToken);
             alert('Login successful!');
         } catch (error) {
             console.error('Error logging in user:', error.response?.data || error.message);
