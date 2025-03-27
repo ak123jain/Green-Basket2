@@ -15,9 +15,10 @@ const Profile = () => {
                 const response = await axios.get(`${import.meta.env.VITE_API_URL}/user/profile` , {
                     headers: {
                         'Content-Type': 'application/json',
+                        Authorization :   `Bearer ${token}`,
                     },
                     withCredentials: true,  
-                    Authorization :   `Bearer ${token}`,
+                    
                 });
                 console.log("what data i received ",response.data);
                 setuserdata(response.data.messege); // Save user data in state
