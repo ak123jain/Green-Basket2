@@ -19,6 +19,8 @@ const Login = () => {
 
         try {
             const token = localStorage.getItem("accessToken"); 
+            console.log("akash token is here in frontend " , token);
+            
             const response = await axios.post( `${import.meta.env.VITE_API_URL}/user/loggedin`, formdata, {
                 headers: {
                     'Content-Type': 'application/json',
