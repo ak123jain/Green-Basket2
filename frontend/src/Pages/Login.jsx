@@ -33,6 +33,9 @@ const Login = () => {
 
             console.log("Login Successful:", response.data);
             const { accessToken } = response.data.data;
+
+            console.log("Access Token: in login response", accessToken);
+            
       
               // Store accessToken in localStorage
               localStorage.setItem("accessToken", accessToken);
