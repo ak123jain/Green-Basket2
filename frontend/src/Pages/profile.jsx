@@ -11,12 +11,13 @@ const Profile = () => {
     useEffect(() => {
         const fetchedUserDetail = async () => {
             try {
-                 
+                const token = localStorage.getItem("accessToken"); 
                 const response = await axios.get(`${import.meta.env.VITE_API_URL}/user/profile` , {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    withCredentials: true, // Include cookies in the request
+                    withCredentials: true,  
+                    Authorization :   `Bearer ${token}`,
                 });
                 console.log("what data i received ",response.data);
                 setuserdata(response.data.messege); // Save user data in state
