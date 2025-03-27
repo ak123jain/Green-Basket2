@@ -18,12 +18,13 @@ const Login = () => {
         formdata.append('password', password);
 
         try {
+            const token = localStorage.getItem("accessToken"); 
             const response = await axios.post( `${import.meta.env.VITE_API_URL}/user/loggedin`, formdata, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                withCredentials : true
-                 
+                withCredentials : true,
+                Authorization :   `Bearer ${token}`,
             });
             console.log('response:', response.data);
             alert('Login successful!');
