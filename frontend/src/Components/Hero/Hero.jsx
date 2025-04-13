@@ -1,5 +1,5 @@
 import './Hero.css'
-import banner from '../Assets/green_banner.png'
+import banne from '../Assets/greenbanner.png'
 import React from 'react'
  
 const  Hero = () => {
@@ -18,7 +18,7 @@ const  Hero = () => {
              
             <div className="hero-right">
             <div className="second-icon">
-                <img src={banner} alt="" />
+                <img src={banne} alt="" />
             </div>
             </div>
          </div>
