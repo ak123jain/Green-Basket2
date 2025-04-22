@@ -1,7 +1,8 @@
 import './Hero.css'
 import banne from '../Assets/greenbanner.png'
 import React from 'react'
- 
+import sd from '../Assets/leaves.png' 
+
 const  Hero = () => {
     return (
         <div className="hero">
@@ -10,7 +11,7 @@ const  Hero = () => {
             <div className="hero-icon">
                 <p>Join The Organic </p>
                 <p>Movement!</p>
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G6nqfYga9u1j2K1hhvAxDeU9R-2F5-Jisg&s' alt="hello" />
+                <img src={sd} alt="hello" />
             </div>
             <p>Get Seeds, Manure, Tools and</p>
             <p>Much More at affordable rate</p>
