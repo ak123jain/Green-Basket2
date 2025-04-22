@@ -19,8 +19,8 @@ const Navbar = () => {
     }, [])
 
     return (
-        <div className="fixed top-4 left-0 right-0 z-50 flex justify-center pointer-events-none px-4 sm:px-6">
-            <div className={`pointer-events-auto w-full max-w-7xl mx-auto rounded-3xl px-6 py-4 transition-all duration-300 ${
+        <div className="fixed top-4 left-0 right-0 z-50 flex justify-center pointer-events-none px-4 sm:px-6   ">
+            <div className={`pointer-events-auto w-full max-w-7xl mx-auto rounded-3xl px-6 py-4 transition-all bg-green-800 duration-300 ${
                 scrolled
                     ? "bg-green-700 shadow-2xl"
                     : "bg-green-800"
@@ -54,9 +54,9 @@ const Navbar = () => {
                         <Link to='/login'>
                             <button className={`${
                                 scrolled 
-                                    ? "bg-green-500 hover:bg-green-400" 
-                                    : "bg-green-600 hover:bg-green-500"
-                            } text-white px-4 py-1 rounded-full transition-colors duration-300`}>
+                                    ? "bg-black hover:bg-black" 
+                                    : "bg-lack hover:bg-black"
+                            } text-white px-4 py-1 rounded-full bg-black transition-colors duration-300`}>
                                 Sign In
                             </button>
                         </Link>
@@ -72,14 +72,14 @@ const Navbar = () => {
 
                         <div className="flex items-center space-x-4">
                             <Link to='/profile'>
-                                <img src={Akash} alt="Profile" className="w-8 h-8 rounded-full object-cover border-2 border-green-300" />
+                                <img src={Akash} alt="Profile" className="w-10 h-10 rounded-full object-cover border-2 border-green-300" />
                             </Link>
                             <Link to='/addproduct'>
                                 <button className={`${
                                     scrolled 
                                         ? "bg-green-600 hover:bg-green-500" 
                                         : "bg-green-700 hover:bg-green-600"
-                                } text-green-100 px-3 py-1 rounded-full text-sm transition-colors duration-300`}>
+                                } text-green-100 px-3 py-1 rounded-full text-sm transition-colors bg-black duration-300`}>
                                     Add Product
                                 </button>
                             </Link>
