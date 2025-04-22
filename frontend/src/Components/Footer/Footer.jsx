@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer-container bg-green-50 text-green-900 py-12 px-6 md:px-20">
+        <footer className="footer-container  bg-green-200 text-green-900 py-12 px-6 md:px-20">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {/* Logo & Category */}
                 <div className="space-y-4">
@@ -54,7 +54,8 @@ const Footer = () => {
                 </div>
 
                 {/* Newsletter or Social (optional) */}
-                <div>
+                 
+                <div  >
                     <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
                     <p className="text-sm text-gray-600 mb-2">
                         Get the latest updates, offers, and gardening tips.
