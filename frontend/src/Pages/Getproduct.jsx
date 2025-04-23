@@ -58,7 +58,7 @@ const Getproduct = () => {
                                     </div>
                                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{product.name}</h3>
                                     <div className="flex items-center">
-                                        <span className="text-lg font-bold text-indigo-600">${product.new_price}</span>
+                                        <span className="text-lg font-bold text-black">${product.new_price}</span>
                                         <span className="ml-2 text-sm text-gray-500 line-through">${product.old_price}</span>
                                         {calculateDiscount(product.old_price, product.new_price) > 0 && (
                                             <span className="ml-auto bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">
@@ -66,7 +66,7 @@ const Getproduct = () => {
                                             </span>
                                         )}
                                     </div>
-                                    <button className="mt-4 w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
+                                    <button className="mt-4 w-full bg-grey-600 text-white py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
                                         View Details
                                     </button>
                                 </div>
