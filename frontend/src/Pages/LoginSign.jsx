@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { User, Mail, MapPin, Upload, Check, ArrowRight } from 'lucide-react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const LoginSign = () => {
   const [name, setName] = useState('');
@@ -229,6 +230,15 @@ const LoginSign = () => {
                 </>
               )}
             </button>
+
+
+             <Link to='/loggeduser' >
+             <button>
+              logi
+            </button>
+             </Link>
+
+             
           </form>
           
           <div className="mt-6 text-center">
