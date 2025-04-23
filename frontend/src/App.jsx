@@ -13,11 +13,13 @@ import Footer from './Components/Footer/Footer';
 import plant_banner from './Components/Assets/plant_banner.jpeg';
 import seeds_banner from './Components/Assets/seeds_banner.jpg';
 import  vagetable_banner from './Components/Assets/vegetable_banner.webp';
-import Login from './Pages/Login';
+ 
 import Profile from './Pages/profile';
 import Logout from './Pages/Logout';
+import Login from './Pages/Login';
 import Addproduct from './Pages/Addproduct';
 import Getproduct from './Pages/Getproduct';
+ 
  
  
 
