@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { User, Mail, MapPin, Upload, Check, ArrowRight } from 'lucide-react';
+import axios from 'axios';
 
 const LoginSign = () => {
   const [name, setName] = useState('');
@@ -55,10 +56,14 @@ const LoginSign = () => {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/user/register`, {
-        method: 'POST',
-        body: formData
+      const response = await  axios.post(`${import.meta.env.VITE_API_URL}/user/register`, {
+        formData,
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+
       });
+      console.log('Response:', response.data);
       
       if (!response.ok) {
         throw new Error('Registration failed');
