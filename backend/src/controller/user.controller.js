@@ -120,13 +120,13 @@ const loggedinUser = asynchandler(async (req, res) => {
   console.log("ritu ", req.body.email);
   console.log("ritu ", req.body.username);
 
-  if (!username || !password) {
+  if (  !password) {
     throw new ApiError(404, "username or password is invalid");
   }
 
-  const user = await User.findOne({
-    $or: [{ username }, { email }],
-  });
+  const user = await User.findOne( 
+    { $or: [ { email } ] },
+  );
 
   if (!user) {
     throw new ApiError(404, "User does not exist");
