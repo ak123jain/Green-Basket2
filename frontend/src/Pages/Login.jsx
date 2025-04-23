@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './CSS/Login.css';
-import axios from 'axios';
+ 
  
 
 const Login = () => {
@@ -21,10 +21,11 @@ const Login = () => {
             const token = localStorage.getItem("accessToken"); 
             console.log("akash token is here in frontend " , token);
             
-            const response = await axios.post( `${import.meta.env.VITE_API_URL}/user/loggedin`, formdata, {
-                withCredentials : true,
-                 
-            });
+            
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/user/loggedin`, {
+                method: 'POST',
+                body: formdata,
+              });
             console.log('response:', response.data);
 
             console.log("Login Successful:", response.data.messege);
