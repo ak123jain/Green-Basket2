@@ -1,48 +1,4 @@
-// import React , {useContext} from "react";
-
-// import '../CartItem.css'
-// import { ShopContext } from "../../Context/ShopContext";
-// import remove_icon from '../Assets/cart_cross_icon.png'
  
-
-// const CartItem = () => {
-
-//     const {cartItem , removefromCart , all_products} = useContext(ShopContext)
-
-//     return(
-//         <div className="cartitems">
-//             <div className="cartItemformat">
-//                 <p>Products</p>
-//                 <p>price</p>
-//                 <p>tittle</p>
-//                 <p>quantity</p>
-//                 <p>total</p>
-//                 <p>remove</p>
-//             </div>
-//             <hr />
-//              {all_products.map((e)=>{
-//                 if (cartItem[e.id]>0) {// matlab es id ka product available ha
-                    
-//                     <div>
-//                     <div className="cartitems-format">
-//                         <img src={e.image} alt="" className="carticon-producticon"
-//                          />
-//                          <p>{e.name}</p>
-//                          <p>${e.new_price}</p>
-//                           {/* es id ka jitna product ha vo mil jyege */}
-//                          <button className="caritems-quantity" >{cartItem[e.id]}</button> 
-//                          <p>{e.new_price* cartItem[e.id]}</p>
-//                          <img src="" alt="" onClick={()=>{removefromCart(e.id)}} />
-//                     </div>
-//                  </div>
-//                 }
-//              })}
-//         </div>
-//     )
-
-// }
-
-// export default CartItem
 
 import  { useContext , useState , useEffect} from "react";
 import './CartItem.css'
