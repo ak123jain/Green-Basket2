@@ -73,7 +73,7 @@ const Profile = () => {
                                 </div>
                                 
                                 <Link to='/logout' className="w-full">
-                                    <button className="w-full bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transition-colors font-medium flex items-center justify-center">
+                                    <button className="w-full bg-green-500 hover:bg-green-900 text-white py-2 px-4 rounded-lg transition-colors font-medium flex items-center justify-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1H3zm7 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm1 4a1 1 0 102 0V7a1 1 0 10-2 0v4z" clipRule="evenodd" />
                                         </svg>
