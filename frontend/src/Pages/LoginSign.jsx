@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { User, Mail, Lock, MapPin, Upload, Check, ArrowRight, Eye, EyeOff } from 'lucide-react';
+import { useState } from 'react';
+import { User, Mail, MapPin, Upload, Check, ArrowRight } from 'lucide-react';
 
 const LoginSign = () => {
   const [name, setName] = useState('');
@@ -9,7 +9,6 @@ const LoginSign = () => {
   const [avatar, setAvatar] = useState(null);
   const [avatarPreview, setAvatarPreview] = useState('');
   const [agreeTerms, setAgreeTerms] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formErrors, setFormErrors] = useState({});
 
@@ -68,10 +67,18 @@ const LoginSign = () => {
       const data = await response.json();
       console.log('Response:', data);
       alert('Registration successful!');
-      window.location.href = '/loggeduser';
-    } catch (error) {
-      console.error('Error registering user:', error.message);
-      alert('Registration failed. Please try again.');
+    // Assuming the response data contains the access token
+    const { accessToken } = data;
+    if (accessToken) {
+      localStorage.setItem('accessToken', accessToken);
+      window.location.href = '/'; // Redirect to the home page after successful registration and login
+    } else {
+      console.error('Access token not found in response data');
+      alert('Registration successful, but automatic login failed. Please log in manually.');
+    }
+  } catch (error) {
+    console.error('Error registering user:', error.message);
+    alert('Registration failed. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -280,5 +287,3 @@ const LoginSign = () => {
 };
 
 export default LoginSign;
-
-// remove this sjhow password icon and funcytinlaty ssimple in passord inout
