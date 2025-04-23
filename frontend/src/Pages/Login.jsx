@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './CSS/Login.css';
 import axios from 'axios';
  
@@ -22,9 +22,6 @@ const Login = () => {
             console.log("akash token is here in frontend " , token);
             
             const response = await axios.post( `${import.meta.env.VITE_API_URL}/user/loggedin`, formdata, {
-                headers: {
-                    Authorization :   `Bearer ${token}`
-                },
                 withCredentials : true,
                  
             });
