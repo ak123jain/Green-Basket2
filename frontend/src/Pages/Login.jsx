@@ -13,16 +13,14 @@ const Login = () => {
         e.preventDefault();
 
         // Correcting FormData creation
-        const formdata = new FormData();
-        formdata.append('username', username);
-        formdata.append('email', email);
-        formdata.append('password', password);
+         
 
         try {
              
             
             const response = await axios.post(`${import.meta.env.VITE_API_URL}/user/loggedin`, {
-                 formdata,
+                email,
+                password,
                  headers: {
                     'Content-Type': 'multipart/form-data',
                  }
